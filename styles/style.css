@@ -78,7 +78,6 @@
   font-size: 14px;
   margin-bottom: 23px;
   margin-left: 20px;
-  justify-self: center;
   background-color: var(--bg-color);
 }
 
@@ -150,8 +149,8 @@
   background: var(--bg-color);
   border: 2px solid var(--accent-color);
   padding: 4px 11px;
-  font-weight: 700;
   line-height: normal;
+  font-variation-settings: var(--inter-weight-header);
 }
 
 .picture-block {
@@ -282,19 +281,16 @@
   transition: outline 0.3s ease;
 }
 
+.sparks {
+  opacity: 0;
+}
+
 .like-icon {
   position: relative;
   top: 2px;
   left: -2px;
   width: 39px;
   height: 36px;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.like-icon {
   .core {
     fill: transparent;
     transition: fill 0.03s 0.3s linear;
