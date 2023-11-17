@@ -86,6 +86,7 @@
   border: none;
   background: none;
   text-transform: uppercase;
+  padding-inline: 0px;
 }
 
 .theme-menu__button:disabled {
@@ -95,6 +96,7 @@
 
 .theme-menu__button:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .theme-menu__button:focus {
@@ -105,16 +107,16 @@
 .theme-menu__button::after {
   position: absolute;
   content: "";
-  left: 0;
-  bottom: 0;
+  left: 0px;
+  bottom: -3px;
   display: block;
   width: 0%;
-  height: 1px;
+  height: 2px;
   background: currentColor;
   transition: 0.3s;
+  margin-block-start: 2px;
 }
 
-.theme-menu__button:hover::after,
 .theme-menu__button:focus::after {
   width: 100%;
 }
@@ -122,6 +124,7 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  top: 1px;
   left: -12px;
   background-color: transparent;
   opacity: 0.6;
@@ -129,18 +132,7 @@
   animation: arrow 0.5s ease-in-out infinite;
 }
 
-@keyframes arrow {
-  0%,
-  100% {
-    transform: translateX(-4px);
-  }
-
-  50% {
-    transform: translateX(0px);
-  }
-}
-
-.card-list {
+.main-block {
   width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
 }
 
@@ -361,26 +353,6 @@
   animation: sparks 0.3s 0.3s ease-in;
 }
 
-@keyframes like {
-  0%,
-  100% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.5;
-  }
-}
-
-@keyframes sparks {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 .card__like-button {
   position: relative;
   background-color: var(--bg-color);
@@ -425,7 +397,7 @@
   background-color: var(--bg-color);
   border: 2px solid var(--accent-color);
   width: clamp(19.375rem, 18.7368rem + 2.723vw, 21.1875rem);
-  gap: 8px;
+  gap: 6px;
   padding: 15px 20px;
   transition: box-shadow 0.3s ease;
 }
@@ -467,6 +439,7 @@
   .save-button {
     flex-direction: column;
     align-items: center;
+    gap: 8px;
   }
 
   .floppy {
@@ -529,8 +502,8 @@
   grid-row: 2/3;
 }
 
-button:focus-visible {
-  box-shadow: 2px 2px var(--main-color);
+.dialog_button:focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
 
