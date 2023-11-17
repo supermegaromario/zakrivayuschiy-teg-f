@@ -3,7 +3,7 @@
 @font-face {
   font-display: swap;
   font-family: Inter;
-  src: local("Inter"),
+  src:
     url(./Inter-Variable.woff2) format("woff2 supports variations"),
     url(./Inter-Variable.woff2) format("woff2-variations");
   font-weight: 400 785;
