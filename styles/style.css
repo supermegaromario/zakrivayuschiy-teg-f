@@ -31,7 +31,7 @@
     linear-gradient(var(--gradient-color-up), var(--gradient-color-down));
   background-attachment: fixed;
   font-family: var(--main-font), Arial, sans-serif;
-  font-variation-settings: var(--inter-weight-text);
+  font-variation-settings: "wght" var(--inter-weight-text);
   color: var(--accent-color);
   justify-items: center;
   padding: 100px 0;
@@ -150,7 +150,7 @@
   border: 2px solid var(--accent-color);
   padding: 4px 11px;
   line-height: normal;
-  font-variation-settings: var(--inter-weight-header);
+  font-variation-settings: "wght" var(--inter-weight-header);
 }
 
 .picture-block {
